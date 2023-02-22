@@ -30,7 +30,7 @@ class MainFragment : Fragment() {
         val recyclerViewCharacters: RecyclerView? = activity?.findViewById(R.id.rv_2)
         recyclerViewCharacters?.layoutManager = LinearLayoutManager(context)
         val lCharacter = listOf(Character.mock())
-        val adapterCharacters = RecyclerViewAdapterCharacters(lCharacter, this)
+        val adapterCharacters = RecyclerAdapterCharacters(lCharacter, this)
         recyclerViewCharacters?.adapter = adapterCharacters
 
     }

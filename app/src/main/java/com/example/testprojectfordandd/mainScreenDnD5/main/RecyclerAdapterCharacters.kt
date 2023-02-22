@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.testprojectfordandd.R
 import com.example.testprojectfordandd.mainScreenDnD5.main.data.Character
 
-class RecyclerViewAdapterCharacters(private val mas:List<Character>, private val context:MainFragment):
+class RecyclerAdapterCharacters(private val mas:List<Character>, private val context:MainFragment):
     RecyclerView.Adapter<ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView =
