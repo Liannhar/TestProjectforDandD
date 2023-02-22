@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    tools:context=".mainScreenDnD5.main.MainFragment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logomain"/>
+    <TextView
+        android:id="@+id/text_main_fragment_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yourCampaigns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintTop_toTopOf="@id/text_main_fragment_2"
+        app:layout_constraintBottom_toBottomOf="@id/text_main_fragment_2" />
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.25"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@id/text_main_fragment_1"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layoutManager="LinearLayoutManager"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/text_main_fragment_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yourCharacters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        android:layout_marginTop="5dp"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintTop_toTopOf="@id/text_main_fragment_1"
+        app:layout_constraintBottom_toBottomOf="@id/text_main_fragment_1" />
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.25"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@id/text_main_fragment_2"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ly_1"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/card_characters_and_groups"/>
+
+    <LinearLayout
+        android:id="@+id/ly_1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:src="@drawable/baseline_book_24"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:src="@drawable/baseline_menu_book_24"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
